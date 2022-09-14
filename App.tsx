@@ -1,5 +1,7 @@
 import { ThemeProvider } from "styled-components"
 
+import { StatusBar } from "react-native"
+
 import {
   useFonts,
   Roboto_400Regular,
@@ -21,6 +23,13 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
+
+      <StatusBar 
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+
       { !fontsLoaded ? <Loading /> : <Groups /> }
     </ThemeProvider>
   )
