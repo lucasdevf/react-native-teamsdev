@@ -13,6 +13,7 @@ import { Groups } from "@screens/Groups"
 import theme from "@theme/index"
 
 import { Loading } from "@components/Loading"
+import { NewGroup } from "@screens/NewGroup"
 
 export default function App() {
 
@@ -30,7 +31,7 @@ export default function App() {
         translucent
       />
 
-      { !fontsLoaded ? <Loading /> : <Groups /> }
+      { !fontsLoaded ? <Loading /> : <NewGroup /> }
     </ThemeProvider>
   )
 }
