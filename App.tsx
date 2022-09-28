@@ -15,6 +15,7 @@ import { Loading } from "@components/Loading"
 /* SCREENS */
 import { NewGroup } from "@screens/NewGroup"
 import { Groups } from "@screens/Groups"
+import { Players } from "@screens/Players"
 
 export default function App() {
 
@@ -32,7 +33,7 @@ export default function App() {
         translucent
       />
 
-      { !fontsLoaded ? <Loading /> : <Groups /> }
+      { !fontsLoaded ? <Loading /> : <Players /> }
     </ThemeProvider>
   )
 }
