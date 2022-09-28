@@ -1,4 +1,4 @@
-import styled from 'styled-components/native'
+import styled, { css } from 'styled-components/native'
 
 export const Container = styled.TextInput`
   flex: 1;
@@ -6,11 +6,13 @@ export const Container = styled.TextInput`
   min-height: 56px;
   max-height: 56px;
 
-  background: ${props => props.theme.COLORS.GRAY_700};
-  color: ${props => props.theme.COLORS.WHITE};
+  ${({ theme }) => css`
+    background: ${theme.COLORS.GRAY_700};
+    color: ${theme.COLORS.WHITE};
 
-  font-family: ${props => props.theme.FONT_FAMILY.REGULAR};
-  font-size: ${props => props.theme.FONT_SIZE.MD}px;
+    font-family: ${theme.FONT_FAMILY.REGULAR};
+    font-size: ${theme.FONT_SIZE.MD}px;
+  `}
 
   border-radius: 6px;
   padding: 16px;
