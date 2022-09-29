@@ -10,6 +10,7 @@ import { ButtonIcon } from "@components/ButtonIcon";
 import { Input } from "@components/Input";
 import { Filter } from "@components/Filter";
 import { useState } from "react";
+import { PlayerCard } from "@components/PlayerCard";
 
 export function Players() {
 
@@ -17,7 +18,7 @@ export function Players() {
 
   const [teamSelected, setTeamSelected] = useState('TEAM A')
 
-  const [players, setPlayers] = useState([])
+  const [players, setPlayers] = useState(['Lucas', 'Mateus', 'Tiago'])
 
   function handleClickTeam(newTeam: string) {
     setTeamSelected(newTeam)
@@ -42,7 +43,7 @@ export function Players() {
         <FlatList 
           data={teams}
           keyExtractor={item => item}
-          renderItem ={({ item }) => (
+          renderItem={({ item }) => (
             <Filter 
               title={item} 
               isActive={item === teamSelected} 
@@ -54,6 +55,17 @@ export function Players() {
 
         <NumbersOfPlayers>{players.length}</NumbersOfPlayers>
       </HeaderList>
+
+      <FlatList 
+        data={players}
+        keyExtractor={item => item}
+        renderItem={({ item }) => (
+          <PlayerCard 
+            name={item} 
+            onRemove={() => {}} 
+          />
+        )}
+      />
       
     </Container>
   )
