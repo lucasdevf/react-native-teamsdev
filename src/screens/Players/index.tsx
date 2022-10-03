@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FlatList } from "react-native";
 
 /* STYLES */
-import { Container, Form, HeaderList, NumbersOfPlayers } from "./styles";
+import { Container, Form, HeaderList, NumberOfPlayers } from "./styles";
 
 /* COMPONENTS */
 import { Header } from "@components/Header";
@@ -56,7 +56,7 @@ export function Players() {
           horizontal
         />
 
-        <NumbersOfPlayers>{players.length}</NumbersOfPlayers>
+        <NumberOfPlayers>{players.length}</NumberOfPlayers>
       </HeaderList>
 
       <FlatList 
