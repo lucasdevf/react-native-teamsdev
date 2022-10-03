@@ -14,10 +14,8 @@ import { ThemeProvider } from "styled-components/native"
 /* COMPONENTS */
 import { Loading } from "@components/Loading"
 
-/* SCREENS */
-import { NewGroup } from "@screens/NewGroup"
-import { Groups } from "@screens/Groups"
-import { Players } from "@screens/Players"
+/* ROUTES */
+import { Routes } from "./src/routes"
 
 export default function App() {
 
@@ -35,7 +33,7 @@ export default function App() {
         translucent
       />
 
-      { !fontsLoaded ? <Loading /> : <Groups /> }
+      { !fontsLoaded ? <Loading /> : <Routes /> }
     </ThemeProvider>
   )
 }

@@ -1,10 +1,23 @@
+/* NAVIGATION */
+import { useNavigation } from '@react-navigation/native'
+
+/* COMPONENTS */
 import { Button } from '@components/Button'
 import { Header } from '@components/Header'
 import { Highlight } from '@components/Highlight'
 import { Input } from '@components/Input'
+
+/* STYLES */
 import { Container, Content, Icon } from './styles'
 
 export function NewGroup() {
+
+  const navigation = useNavigation()
+
+  function handleCreateGroup() {
+    navigation.navigate('players', { group: 'teste' })
+  }
+
   return (
     <Container>
       <Header showBackButton />
@@ -21,6 +34,7 @@ export function NewGroup() {
         <Button 
           title="Criar turma"
           style={{ marginTop: 20 }}
+          onPress={handleCreateGroup}
         />
       </Content>
     </Container>
