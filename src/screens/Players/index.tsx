@@ -1,3 +1,5 @@
+
+import React, { useState } from "react";
 import { FlatList } from "react-native";
 
 /* STYLES */
@@ -9,8 +11,9 @@ import { Highlight } from "@components/Highlight";
 import { ButtonIcon } from "@components/ButtonIcon";
 import { Input } from "@components/Input";
 import { Filter } from "@components/Filter";
-import { useState } from "react";
+import { ListEmpty } from "@components/ListEmpty";
 import { PlayerCard } from "@components/PlayerCard";
+import { Button } from "@components/Button";
 
 export function Players() {
 
@@ -18,7 +21,7 @@ export function Players() {
 
   const [teamSelected, setTeamSelected] = useState('TEAM A')
 
-  const [players, setPlayers] = useState(['Lucas', 'Mateus', 'Tiago'])
+  const [players, setPlayers] = useState(['Lucas', 'Mateus', 'Breno', 'João', 'Wagner', 'Adriano', 'Maria'])
 
   function handleClickTeam(newTeam: string) {
     setTeamSelected(newTeam)
@@ -65,6 +68,19 @@ export function Players() {
             onRemove={() => {}} 
           />
         )}
+        ListEmptyComponent={() => (
+          <ListEmpty message="Não há pessoas nesse time" />
+        )}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={[
+          { paddingBottom: 100 },
+          players.length === 0 && { flex: 1 }
+        ]}
+      />
+
+      <Button 
+        title="Remover turma"
+        type="DANGER"
       />
       
     </Container>
