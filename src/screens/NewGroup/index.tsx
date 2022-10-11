@@ -12,14 +12,23 @@ import { Input } from '@components/Input'
 /* STYLES */
 import { Container, Content, Icon } from './styles'
 
+/* STORAGE FUNCTIONS */
+import { createGroup } from '@storage/group/createGroup'
+
 export function NewGroup() {
 
   const [group, setGroup] = useState('')
 
   const navigation = useNavigation()
 
-  function handleCreateGroup() {
-    navigation.navigate('players', { group })
+  async function handleCreateGroup() {
+    try {
+      await createGroup(group)
+
+      navigation.navigate('players', { group })
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
