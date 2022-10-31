@@ -10,7 +10,7 @@ Ignite Teams é um app desenvolvido com React Native e Expo com o objetivo de pr
 * [Como rodar](#how-to-run)
 
 
-# <a name=“features”><a/> Funcionalidades
+# <a name=“features”></a> Funcionalidades
 - [x] Visualizar os grupos criados
 - [x] Criar um novo grupo
 - [x] Visualizar as pessoas de cada grupo separando por times (Team A e Team B)
@@ -18,14 +18,14 @@ Ignite Teams é um app desenvolvido com React Native e Expo com o objetivo de pr
 - [x] Remover pessoas dos grupos e do time que a pessoa estiver
 - [x] Remover grupo
 
-# <a name=“technologies”><a/> Tecnologias utilizadas
+# <a name=“technologies”></a> Tecnologias utilizadas
 * React Native
 * Expo
 * Styled-components
 * React Navigation
 * Async Storage
 
-# <a name=“how-to-run”><a/> Como rodar a aplicação
+# <a name=“how-to-run”></a> Como rodar a aplicação
 1. Em seu terminal, clone o projeto: ``git clone https://github.com/magod3v/react-native-teamsdev``
 2. Instale as dependências, executando: ``yarn install``
 3. Execute a aplicação, executando: ``expo start``
