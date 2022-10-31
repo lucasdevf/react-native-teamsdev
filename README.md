@@ -21,7 +21,7 @@ Ignite Teams é um app desenvolvido com React Native e Expo com o objetivo de pr
 # <a name=“technologies”><a/> Tecnologias utilizadas
 * React Native
 * Expo
-* Styld-components
+* Styled-components
 * React Navigation
 * Async Storage
 
