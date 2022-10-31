@@ -1,6 +1,5 @@
 # <h1 align="center">Ignite Teams</h1>
 
-# <a name=“description”><a/> Descrição do app
 Ignite Teams é um app desenvolvido com React Native e Expo com o objetivo de praticar a criação de interfaces de forma performática e robusta e também aprofundar os estudos em navegação, mais especificamente na Stack Navigation.
 
 ![Prints da aplicação](https://user-images.githubusercontent.com/103274980/199029533-1e560447-c81d-421e-866f-b81e6eb6ecb7.png)
